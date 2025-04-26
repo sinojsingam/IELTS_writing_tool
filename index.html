@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel='icon' href="pen-icon.png">
+    <title>IELTS WRITING TASK</title>
+    <script src="jquery-1.5.js"></script>
+
+    <script src="https://kit.fontawesome.com/d436095357.js" crossorigin="anonymous"></script>
+    <script>
+      function countChar(val) {
+        $("#text1").keyup(function () {
+          var wordCount = $(this)
+            .val()
+            .split(/[\s\.\?]+/).length;
+          $("#current").text(wordCount);
+          $("#remain").text(150 - wordCount);
+        });
+      }
+      function countChar2(val) {
+        $("#text2").keyup(function () {
+          var wordCount = $(this)
+            .val()
+            .split(/[\s\.\?]+/).length;
+          $("#current2").text(wordCount);
+          $("#remain2").text(250 - wordCount);
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">IELTS Writing Test<br>Training Tool</h1>
+    <label for="testname">Test name:</label>
+    <input type="text" id="testname" name="testname" maxlength="10">
+    <div id="task-1" class="taskWrapper">
+      <div class="headTitle" id="task-1-title">
+        <h1 class="task">Task 1</h1>
+        <div id="timer">
+          <div id="out_of_time"></div>
+          <div id="timer_span">
+            <span id="minutes">20</span>:<span id="seconds">00</span>
+          </div>
+        </div>
+        <div class="buttons">
+          <!-- <button class="myButton" id="start">Start</button> -->
+          <div id="start">
+            <i class="fas fa-play" id="start-icon"></i>
+            <i class="fas fa-pause" id="pause-icon"></i>
+          </div>
+          <i class="fas fa-undo-alt"id="reset-icon"></i>
+        </div>
+      </div>
+      <textarea
+        class="text"
+        id="text1"
+        onkeyup="countChar(this)"
+        placeholder="Start typing Task 1..."
+        autocomplete="off"
+        spellcheck="false"
+        autocorrect="off"
+      ></textarea>
+      <div class="infoWrapper">
+        <div>
+          <span id="current">0</span>
+          <span id="total">/ 150</span>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div id="class-2" class="taskWrapper">
+      <div class="headTitle" id="task-2-title">
+        <h1 class="task">Task 2</h1>
+        <div id="timer2">
+          <div id="out_of_time2"></div>
+          <div id="timer_span2">
+            <span id="minutes2">00</span>:<span id="seconds2">05</span>
+          </div>
+        </div>
+        <div class="buttons">
+          <div id="start2">
+            <i class="fas fa-play" id="start-icon2"></i>
+            <i class="fas fa-pause" id="pause-icon2"></i>
+          </div>
+          <i class="fas fa-undo-alt"id="reset-icon2"></i>
+        </div>
+        <!--<button class="myButton" id="reset">Reset</button> --> 
+      </div>
+      <textarea
+        class="text"
+        id="text2"
+        placeholder="Start typing Task 2..."
+        autocomplete="off"
+        onclick="countChar2(this)"
+        spellcheck="false"
+        autocorrect="off"
+      ></textarea>
+      <div class="infoWrapper">
+        <div>
+          <span id="current2">0</span>
+          <span id="total2">/ 250</span>
+        </div>
+      </div>
+    </div>
+    <button class="downloadButton" id='print-button'>Generate TXT</button>
+    <script src="index.js"></script>
+  </body>
+  <footer class="footer">
+    <section class="contents">
+        <div>Sri Lanka, 2021</div>
+    </section>
+  </footer>
+</html>

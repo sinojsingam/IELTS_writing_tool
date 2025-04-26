@@ -1,0 +1,158 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1.title {
+  color: #555;
+  margin: 3rem 0.5rem 1rem 0.5rem;
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+h1.task {
+  font-size: 1.3rem;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #d0e6ef;
+  color: #666;
+  font-size: 16px;
+}
+.taskWrapper{
+  min-width: 90%;
+  height: auto;
+  background-color: rgba(221, 221, 221, 0.575);
+  margin: 5px;
+  border: 1px dotted rgb(185, 185, 185);
+  border-radius: 5px;
+}
+.text {
+  font-size: 18px;
+  min-width: 100%;
+  height: 20rem;
+  color: black;
+  padding: 10px;
+  resize: none;
+  border-radius: 8px;
+  border: 1px dashed #ddd;
+  box-shadow: inset 0 0 0.25rem #ddd;
+}
+.text:focus{
+  border: 1.9px solid rgb(180, 180, 180);
+  outline: none;
+}
+#text2 {
+  height: 25rem;
+}
+.infoWrapper {
+  display: flex;
+  justify-content: end;
+}
+.headTitle {
+  display:flex;
+  justify-content: space-between;
+}
+.buttons:hover{
+  cursor: pointer;
+}
+#start{
+  display: inline;
+}
+#pause-icon{
+  display: none;
+}
+#start2{
+  display: inline;
+}
+#pause-icon2{
+  display: none;
+}
+.fa-play .fa-pause {
+  font-size:1em;
+  transition: transform .7s ease-in-out;
+}
+.fa-undo-alt{
+  font-size:1em;
+  transition: transform .7s ease-in-out;
+}
+.fa-play:hover{
+  font-size:1.2em;
+  color: rgb(127, 212, 101);
+}
+.fa-pause:hover{
+  font-size:1.2em;
+  color: rgb(212, 205, 101);
+}
+.fa-undo-alt:hover{
+  transform: rotate(360deg);
+  font-size:1.2em;
+  color: rgb(212, 110, 101);
+}
+
+.downloadButton {
+	box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	background-color:#007dc1;
+	border-radius:11px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:15px 39px;
+  margin: 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #154682;
+}
+.downloadButton:hover {
+	background-color:#0061a7;
+}
+.downloadButton:active {
+	position:relative;
+	top:1px;
+}
+.footer{
+  width: 100%;
+  height: auto;
+  background-color: rgb(117, 117, 117);
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: smaller;
+}
+.contents{
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 10px 3px 10px;
+}
+
+#testname{
+  padding: 2.5px 2px 2.5px 2px;
+  min-width: 20%;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  border-bottom: 2px solid rgb(190, 190, 190);
+}
+#testname:focus{
+  outline: none;
+  border-bottom: 2px solid rgb(164, 221, 226);
+}
+timer_span{
+  display: inline;
+}
+out_of_time{
+  display: none;
+  color: rgb(240, 0, 52);
+}
